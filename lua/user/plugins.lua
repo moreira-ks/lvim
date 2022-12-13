@@ -1,5 +1,25 @@
 -- Additional Plugins
 lvim.plugins = {
+  -- {
+    -- "tzachar/cmp-tabnine",
+  --   run = "./install.sh",
+  --   requires = "hrsh7th/nvim-cmp",
+  --   event = "InsertEnter",
+  -- },
+  {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({ "css", "scss", "html", "javascript", "typescript", "typescriptreact" }, {
+        RGB = true, -- #RGB hex codes
+        RRGGBB = true, -- #RRGGBB hex codes
+        RRGGBBAA = true, -- #RRGGBBAA hex codes
+        rgb_fn = true, -- CSS rgb() and rgba() functions
+        hsl_fn = true, -- CSS hsl() and hsla() functions
+        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+      })
+    end,
+  },
   {
     "tpope/vim-dadbod",
   },
@@ -48,13 +68,6 @@ lvim.plugins = {
         vim.cmd("nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>");
       }
     end
-  },
-  {
-    "andymass/vim-matchup",
-    event = "CursorMoved",
-    config = function()
-      vim.g.matchup_matchparen_offscreen = { method = "popup" }
-    end,
   },
   {
     "windwp/nvim-ts-autotag",
