@@ -117,11 +117,11 @@ local config = {
 				runtimes = {
 					{
 						name = "JavaSE-11",
-						path = "~/.sdkman/candidates/java/11.0.2-open",
+						path = "~/.asdf/installs/java/openjdk-11.0.2",
 					},
 					{
-						name = "JavaSE-18",
-						path = "~/.sdkman/candidates/java/18.0.1.1-open",
+						name = "JavaSE-19",
+						path = "~/.asdf/installs/java/openjdk-19.0.1",
 					},
 				},
 			},
@@ -245,7 +245,7 @@ local vopts = {
 }
 
 local mappings = {
-	C = {
+	j = {
 		name = "Java",
 		o = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "Organize Imports" },
 		v = { "<Cmd>lua require('jdtls').extract_variable()<CR>", "Extract Variable" },
@@ -257,7 +257,7 @@ local mappings = {
 }
 
 local vmappings = {
-	C = {
+	j = {
 		name = "Java",
 		v = { "<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>", "Extract Variable" },
 		c = { "<Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>", "Extract Constant" },
