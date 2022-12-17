@@ -2,6 +2,8 @@ reload "user.options"
 reload "user.plugins"
 reload "user.lsp"
 reload "user.dap"
+reload "user.zen-mode"
+reload "user.keymaps"
 
 require "user.styled".queries()
 require "user.styled".directives()
@@ -14,5 +16,4 @@ lvim.builtin.which_key.mappings["t"] = {
   l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
 }
-
 

@@ -1,5 +1,12 @@
 -- Additional Plugins
 lvim.plugins = {
+"lvimuser/lsp-inlayhints.nvim",
+"folke/zen-mode.nvim",
+{
+  "turbio/bracey.vim",
+  cmd = {"Bracey", "BracyStop", "BraceyReload", "BraceyEval"},
+  run = "npm install --prefix server",
+},
   -- {
     -- "tzachar/cmp-tabnine",
   --   run = "./install.sh",
@@ -25,11 +32,6 @@ lvim.plugins = {
   },
   {
     "kristijanhusak/vim-dadbod-ui",
-  },
-  {
-    "turbio/bracey.vim",
-    cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
-    run = "npm install --prefix server",
   },
   {
     "folke/todo-comments.nvim",
