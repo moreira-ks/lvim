@@ -1,14 +1,41 @@
 -- Additional Plugins
 lvim.plugins = {
-"lvimuser/lsp-inlayhints.nvim",
-"folke/zen-mode.nvim",
+"jose-elias-alvarez/typescript.nvim",
+"mxsdev/nvim-dap-vscode-js",
+'mzlogin/vim-markdown-toc',
 {
-  "turbio/bracey.vim",
-  cmd = {"Bracey", "BracyStop", "BraceyReload", "BraceyEval"},
-  run = "npm install --prefix server",
+  "iamcco/markdown-preview.nvim",
+  run = "cd app && npm install",
+  ft = "markdown",
+  config = function()
+    vim.g.mkdp_auto_start = 1
+    vim.g.mkdp_auto_close = 1
+    vim.g.mkdp_command_for_global = 0
+    vim.g.mkdp_refresh_slow = 0
+    vim.g.mkdp_open_to_the_world = 0
+  end,
 },
+-- You must install glow globally
+-- https://github.com/charmbracelet/glow
+-- yay -S glow
+{
+  "npxbr/glow.nvim",
+  ft = {"markdown"}
+  -- run = "yay -S glow"
+},
+ { "christianchiarulli/telescope-tabs", branch = "chris" },
+  "renerocksai/telekasten.nvim",
+  "renerocksai/calendar-vim",
+  "lunarvim/darkplus.nvim",
+  "lvimuser/lsp-inlayhints.nvim",
+  "folke/zen-mode.nvim",
+  {
+    "turbio/bracey.vim",
+    cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
+    run = "npm install --prefix server",
+  },
   -- {
-    -- "tzachar/cmp-tabnine",
+  -- "tzachar/cmp-tabnine",
   --   run = "./install.sh",
   --   requires = "hrsh7th/nvim-cmp",
   --   event = "InsertEnter",
