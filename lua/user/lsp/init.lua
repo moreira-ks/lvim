@@ -1,4 +1,5 @@
 -- if you don't want all the parsers change this to a table of the ones you want
+require "user.lsp.languages.js-ts"
 lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
