@@ -1,15 +1,16 @@
 reload "user.options"
 reload "user.plugins"
 reload "user.lsp"
-reload "user.dap"
 reload "user.zen-mode"
 reload "user.keymaps"
 reload "user.lua-line"
 reload "user.telescope"
 reload "user.zk"
 reload "user.autocommands"
+
 require "user.styled".queries()
 require "user.styled".directives()
+
 lvim.builtin.which_key.mappings["t"] = {
   name = "Diagnostics",
   t = { "<cmd>TroubleToggle<cr>", "trouble" },
