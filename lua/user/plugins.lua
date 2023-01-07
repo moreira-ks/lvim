@@ -1,29 +1,32 @@
 -- Additional Plugins
 lvim.plugins = {
-"jose-elias-alvarez/typescript.nvim",
-"mxsdev/nvim-dap-vscode-js",
-'mzlogin/vim-markdown-toc',
-{
-  "iamcco/markdown-preview.nvim",
-  run = "cd app && npm install",
-  ft = "markdown",
-  config = function()
-    vim.g.mkdp_auto_start = 1
-    vim.g.mkdp_auto_close = 1
-    vim.g.mkdp_command_for_global = 0
-    vim.g.mkdp_refresh_slow = 0
-    vim.g.mkdp_open_to_the_world = 0
-  end,
-},
--- You must install glow globally
--- https://github.com/charmbracelet/glow
--- yay -S glow
-{
-  "npxbr/glow.nvim",
-  ft = {"markdown"}
-  -- run = "yay -S glow"
-},
- { "christianchiarulli/telescope-tabs", branch = "chris" },
+  {
+    "wakatime/vim-wakatime"
+  },
+  {
+    "monaqa/dial.nvim",
+    event = "BufRead",
+  },
+  "jose-elias-alvarez/typescript.nvim",
+  "mxsdev/nvim-dap-vscode-js",
+  'mzlogin/vim-markdown-toc',
+  {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+    config = function()
+      vim.g.mkdp_auto_start = 1
+      vim.g.mkdp_auto_close = 1
+      vim.g.mkdp_command_for_global = 0
+      vim.g.mkdp_refresh_slow = 0
+      vim.g.mkdp_open_to_the_world = 0
+    end,
+  },
+  {
+    "npxbr/glow.nvim",
+    ft = { "markdown" }
+  },
+  { "christianchiarulli/telescope-tabs", branch = "chris" },
   "renerocksai/telekasten.nvim",
   "renerocksai/calendar-vim",
   "lunarvim/darkplus.nvim",
@@ -103,42 +106,6 @@ lvim.plugins = {
     config = function()
       require("nvim-ts-autotag").setup()
     end,
-  },
-  {
-    "mattn/vim-gist",
-    event = "BufRead",
-    requires = "mattn/webapi-vim",
-  },
-  {
-    "pwntester/octo.nvim",
-    requires = {
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim',
-      'kyazdani42/nvim-web-devicons',
-    },
-    config = function()
-      require("octo").setup()
-    end,
-  },
-  {
-    "ruifm/gitlinker.nvim",
-    event = "BufRead",
-    config = function()
-      require("gitlinker").setup {
-        opts = {
-          -- remote = 'github', -- force the use of a specific remote
-          -- adds current line nr in the url for normal mode
-          add_current_line_on_normal_mode = true,
-          -- callback for what to do with the url
-          action_callback = require("gitlinker.actions").open_in_browser,
-          -- print the url after performing the action
-          print_url = false,
-          -- mapping to call url generation
-          mappings = "<leader>gy",
-        },
-      }
-    end,
-    requires = "nvim-lua/plenary.nvim",
   },
   {
     "f-person/git-blame.nvim",
