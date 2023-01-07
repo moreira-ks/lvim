@@ -1,8 +1,9 @@
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = {
-    "telekasten",
-  },
-  callback = function()
-    vim.cmd "MarkdownPreviewToggle"
-  end,
-})
+lvim.autocommands = {
+    {
+        "BufWrite", -- see `:h autocmd-events`
+        { -- this table is passed verbatim as `opts` to `nvim_create_autocmd`
+            pattern = { "*.md", "*.telekasten" }, -- see `:h autocmd-events`
+            command = "Glow",
+        }
+    },
+}

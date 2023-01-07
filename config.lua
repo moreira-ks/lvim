@@ -6,10 +6,9 @@ reload "user.keymaps"
 reload "user.lua-line"
 reload "user.telescope"
 reload "user.zk"
-reload "user.autocommands"
-
+--
+-- reload "user.autocommands"
+reload "user.dial"
 require "user.styled".queries()
 require "user.styled".directives()
-
-
 
