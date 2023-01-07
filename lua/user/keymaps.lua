@@ -5,11 +5,14 @@ lvim.builtin.which_key.mappings["n"] = {
   name = "Notes",
   c = { "<cmd>Telekasten show_calendar<cr>", "Calendar" },
   n = { "<cmd>Telekasten new_note<cr>", "Note" },
-  f = { "<cmd>Telekasten find_notes<cr>", "Find" },
-  F = { "<cmd>Telekasten find_daily_notes<cr>", "Find Journal" },
+  s = { "<cmd>Telekasten find_notes<cr>", "Search" },
+  d = { "<cmd>Telekasten find_daily_notes<cr>", "Find Journal" },
+  f = {"<cmd>Telekasten follow_link<cr>", "follow link"},
   j = { "<cmd>Telekasten goto_today<cr>", "Journal" },
   p = { "<cmd>Telekasten panel<cr>", "Panel" },
   t = { "<cmd>Telekasten toggle_todo<cr>", "Toggle Todo" },
+  m = {"<cmd>MarkdownPreview<cr>", "Preview"},
+  M = {"<cmd>MarkdownPreviewStop<cr>", "Preview stop"}
 }
 
 lvim.builtin.which_key.mappings["t"] = {

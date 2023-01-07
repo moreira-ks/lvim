@@ -15,7 +15,7 @@ require('telekasten').setup({
     -- weeklies     = home .. '/' .. 'weekly',
     templates    = home .. '/' .. 'templates',
 
-    image_subdir = "images",
+    image_subdir = "img",
     extension    = ".md",
 
     -- Generate note filenames. One of:
@@ -31,9 +31,9 @@ require('telekasten').setup({
     uuid_sep = "-",
 
     -- following a link to a non-existing note will create it
-    follow_creates_nonexisting = false,
+    follow_creates_nonexisting = true,
     dailies_create_nonexisting = false,
-    weeklies_create_nonexisting = false,
+    weeklies_create_nonexisting = true,
 
     -- skip telescope prompt for goto_today and goto_thisweek
     journal_auto_open = false,
@@ -136,7 +136,7 @@ require('telekasten').setup({
     -- how to preview media files
     -- "telescope-media-files" if you have telescope-media-files.nvim installed
     -- "catimg-previewer" if you have catimg installed
-    media_previewer = "telescope-media-files",
+    media_previewer = "catimg-preview",
 
     -- A customizable fallback handler for urls.
     follow_url_fallback = nil,
