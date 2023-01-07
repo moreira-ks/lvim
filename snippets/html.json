@@ -1,0 +1,14 @@
+{
+	"HTML5 template": {
+		"prefix": "html5",
+		"body": [
+			"<!doctype html>",
+			"<html>",
+			"	<head>",
+			"	</head>",
+			"	<body>",
+			"	</body>",
+			"</html>"
+		],
+		"description": "Adds a html5 template"
+	}

@@ -1,9 +1,10 @@
 return {
-  s("sd", {
-    t "spring:",
-    t { "", "  datasource:" },
-    t { "", "    url: jdbc:" }, i(1),
-    t { "", "    username: " }, i(2),
-    t { "", "    password: " }, i(3)
+  s("sds", {
+    t({ "spring: " }),
+    t({ "", " datasource: " }), i(3),
+    t({ "", "   url: " }), i(2),
+    t({ "", "   username: " }), i(1),
+    t({ "","    password: " }), i(0),
   }),
+  
 }

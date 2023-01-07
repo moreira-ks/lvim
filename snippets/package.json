@@ -1,0 +1,34 @@
+{
+  "name": "nvim-snippets",
+  "author": "kaique",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "lua",
+        "path": "./lua.json"
+      },
+      {
+        "language": "html",
+        "path": "./html.json"
+      },
+      {
+        "language": [
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./typescript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./react-ts.json"
+      },
+      {
+        "language": "java",
+        "path": "./java.json"
+      }
+    ]
+  }
+}
