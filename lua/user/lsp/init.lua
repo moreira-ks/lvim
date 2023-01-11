@@ -1,5 +1,6 @@
 -- if you don't want all the parsers change this to a table of the ones you want
 require "user.lsp.languages.js-ts"
+require'lspconfig'.gradle_ls.setup{}
 lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
@@ -18,3 +19,4 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "google_java_format", filetypes = { "java" } },
 }
+
