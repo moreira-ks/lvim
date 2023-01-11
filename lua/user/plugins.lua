@@ -1,6 +1,13 @@
 -- Additional Plugins
 lvim.plugins = {
   {
+    "windwp/nvim-spectre",
+    event = "BufRead",
+    config = function()
+      require("spectre").setup()
+    end,
+  },
+  {
     "wakatime/vim-wakatime"
   },
   {
